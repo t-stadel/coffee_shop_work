@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar class="toolbarColor">
+        <ion-title><b>Uda-Spice Latte</b>
+            <span class="coffee"> Cafe</span>
+            <span><img src="https://www.t-stadel.de/coffee.png" alt="" height="50px"></span>
+        </ion-title>
+        <ion-title class="subtitle">User Page</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngIf="!auth.token">
+    <div style="display: flex; justify-content: center; padding-top: 20px;">
+        <ion-button [href]="loginURL">Log In</ion-button>
+    </div>
+</ion-content>
+<ion-content *ngIf="auth.token">
+    <div style="display: flex; justify-content: center; padding-top: 20px;">
+        <ion-button (click)="auth.logout()">Log Out</ion-button>
+    </div>
+    <ion-item>
+            <ion-label>Active JWT</ion-label>
+            <ion-textarea [ngModel]="auth.token"
+                          rows="8"
+                          class="jwt"
+                          name="Active JWT"></ion-textarea>
+    </ion-item>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar class="toolbarColor">
+        <ion-title><b>Uda-Spice Latte</b>
+            <span class="coffee"> Cafe</span>
+            <span><img src="https://www.t-stadel.de/coffee.png" alt="" height="50px"></span>
+        </ion-title>
+        <ion-title class="subtitle">Drink Menu</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="drinks && drinks.items">
+    <div style="display: flex; justify-content: center; padding-top: 20px;">
+        <ion-card
+                *ngFor="let drink of Object.keys(drinks.items)"
+                (click)="openForm(drinks.items[drink])">
+            <ion-card-header>
+                <ion-card-title>{{drinks.items[drink].title}}</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+                <app-drink-graphic
+                        [drink]="drinks.items[drink]"></app-drink-graphic>
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="create-drink"
+                *ngIf="auth.can('post:drinks')"
+                (click)="openForm()">
+            <ion-card-header>
+                <ion-card-title>Create Drink</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content style="color:grey; font-size: 256%;">
+                <ion-icon class="add-circle" name="add-circle"></ion-icon>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

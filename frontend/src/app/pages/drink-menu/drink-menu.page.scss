@@ -1,0 +1,60 @@
+@import '../../../theme/var';
+
+ion-title {
+  font-family: $font1;
+  font-size: 1.7em;
+}
+
+ion-toolbar {
+  text-align: center;
+}
+
+ion-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba($coffee, 0.25);
+  box-shadow: 3px 3px $light;
+}
+
+ion-card-title {
+  color: $coffee;
+}
+
+.toolbarColor {
+  --background: #cb781e;
+  --color: #ffd4a3;
+}
+
+.subtitle {
+  font-size: 1.7em;
+  text-align: center;
+  font-family: $font2;
+  background-color: $prime-dark;
+  color: $prime;
+}
+
+.jwt {
+  background-color: $light;
+}
+
+.coffee {
+  color: $coffee;
+}
+
+.userData {
+  font-family: $font2;
+  font-size: 0.75em;
+  float: right;
+}
+
+.create-drink {
+  border-color: rgba($coffee, 0.5);
+}
+
+.add-circle {
+  color: $coffee;
+}

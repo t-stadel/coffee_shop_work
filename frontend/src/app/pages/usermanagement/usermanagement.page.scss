@@ -1,0 +1,57 @@
+@import '../../../theme/var';
+
+ion-title {
+  font-family: $font1;
+  font-size: 1.7em;
+}
+
+ion-toolbar {
+  text-align: center;
+}
+
+.toolbarColor {
+  --background: #cb781e;
+  --color: #ffd4a3;
+}
+
+.subtitle {
+  font-size: 1.7em;
+  text-align: center;
+  font-family: $font2;
+  background-color: $prime-dark;
+  color: $prime;
+}
+
+.jwt {
+  background-color: $light;
+}
+
+.coffee {
+  color: $coffee;
+}
+
+.userData {
+  font-family: $font2;
+  font-size: 0.75em;
+  float: right;
+}
+
+ion-button {
+  --background: saddlebrown;
+}
+
+ion-card-title {
+  background-color: $prime-dark;
+  color: $coffee;
+  font-weight: bold;
+  padding: 10px;
+}
+
+ion-card-header {
+  background-color: rgba($prime-dark, 0.2);
+  font-weight: bold;
+}
+
+ion-card-content {
+  padding-top: 15px;
+}

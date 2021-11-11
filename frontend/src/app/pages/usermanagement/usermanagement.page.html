@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar class="toolbarColor">
+        <ion-title><b>Uda-Spice Latte</b>
+            <span class="coffee"> Cafe</span>
+            <span><img src="https://www.t-stadel.de/coffee.png" alt=""
+                       height="50px"></span>
+        </ion-title>
+        <ion-title class="subtitle">Usermanagement</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-row>
+        <ion-col>
+            <ion-card>
+                <ion-card-title>Managers</ion-card-title>
+                    <ion-card-content
+                            *ngFor="let perm of auth.get_permissions_of_type('managers')">
+                         {{ perm }}
+                    </ion-card-content>
+            </ion-card>
+        </ion-col>
+
+        <ion-col>
+            <ion-card>
+                <ion-card-title>Baristas</ion-card-title>
+                <ion-card-content
+                        *ngFor="let perm of auth.get_permissions_of_type('baristas')">
+                    {{ perm }}
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <ion-card>
+                <ion-card-title>Coffeeshop-Permissions</ion-card-title>
+                <ion-card-content
+                        *ngFor="let perm of auth.get_permissions_of_type('drinks')">
+                    {{ perm }}
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-card>
+
+    </ion-card>
+</ion-content>
